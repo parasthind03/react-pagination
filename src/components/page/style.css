@@ -1,0 +1,78 @@
+.dataContainer {
+	display: flex;
+	flex-wrap: wrap;
+	display: grid;
+  margin:  0px 10px;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	column-gap: 0.5rem;
+}
+
+.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 30px;
+}
+
+.paginationItem {
+	background: #fff;
+	border: 1px solid #666;
+	padding: 10px 15px;
+	border-radius: 2%;
+	height: 45px;
+	width: 45px;
+	position: relative;
+	margin: 10px 5px;
+	cursor: pointer;
+}
+
+.paginationItem span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.prev,
+.next {
+	background: #fff;
+	border: none;
+	padding: 10px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+	margin: 0 10px;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.paginationItem.active {
+	border: 1px solid #888;
+	pointer-events: none;
+	background-color: #777;
+	color: #fff;
+}
+
+.prev.disabled,
+.next.disabled {
+	pointer-events: none;
+	box-shadow: none;
+	color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 900px) {
+	.dataContainer {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.dataContainer {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+
+@media screen and (max-width: 500px) {
+	.dataContainer {
+		grid-template-columns: 1fr;
+	}
+}
