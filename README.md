@@ -1,3 +1,5 @@
+This project is made with the help of https://academind.com/tutorials/reactjs-pagination
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
